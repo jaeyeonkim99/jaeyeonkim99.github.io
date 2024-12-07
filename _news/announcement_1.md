@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2024-07-01 00:00:00-0400
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Our team ranked #2 at Task 2 Automated Audio Captioning of DCASE Challenge 2024.

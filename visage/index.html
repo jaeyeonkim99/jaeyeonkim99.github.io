@@ -93,6 +93,7 @@
                 </span>
 
                 <!-- ArXiv abstract Link -->
+                <!--
                 <span class="link-block">
                   <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
@@ -102,6 +103,7 @@
                     <span>arXiv</span>
                   </a>
                 </span>
+              -->
               </div>
             </div>
           </div>
@@ -118,17 +120,28 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Spatial audio is essential for enhancing the immersiveness of audio-visual experiences, yet its production
-              typically demands complex recording systems and specialized expertise. In this work, we address a novel
-              problem of generating first-order ambisonics, a widely used spatial audio format, directly from silent
-              videos. To support this task, we introduce YT-Ambigen, a dataset comprising 102K 5-second YouTube video
-              clips paired with corresponding first-order ambisonics. We also propose new evaluation metrics to assess
-              the spatial aspect of generated audio based on audio energy maps and saliency metrics. Furthermore, we
-              present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end framework that generates first-order
-              ambisonics from silent video frames by leveraging CLIP visual features, autoregressive neural audio codec
-              modeling with both directional and visual guidance. Experimental results demonstrate that ViSAGe produces
-              plausible and coherent first-order ambisonics, outperforming two-stage approaches consisting of
-              video-to-audio generation and audio spatialization. Qualitative examples further illustrate that ViSAGe
+              Spatial audio is essential for enhancing the immersiveness of audio-visual experiences, yet
+              its production
+              typically demands complex recording systems and specialized expertise. In this work, we
+              address a novel
+              problem of generating first-order ambisonics, a widely used spatial audio format, directly
+              from silent
+              videos. To support this task, we introduce YT-Ambigen, a dataset comprising 102K 5-second
+              YouTube video
+              clips paired with corresponding first-order ambisonics. We also propose new evaluation
+              metrics to assess
+              the spatial aspect of generated audio based on audio energy maps and saliency metrics.
+              Furthermore, we
+              present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end framework that generates
+              first-order
+              ambisonics from silent video frames by leveraging CLIP visual features, autoregressive
+              neural audio codec
+              modeling with both directional and visual guidance. Experimental results demonstrate that
+              ViSAGe produces
+              plausible and coherent first-order ambisonics, outperforming two-stage approaches consisting
+              of
+              video-to-audio generation and audio spatialization. Qualitative examples further illustrate
+              that ViSAGe
               generates temporally aligned high-quality spatial audio that adapts to viewpoint changes.
             </p>
           </div>
@@ -142,51 +155,66 @@
   <!-- Overview -->
   <section class="hero is-small">
     <center>
-      <div class="hero-body">
+      <div class="hero-body" style="display: flex; align-items: center; justify-content: center;">
         <div class="container">
           <h2 class="title is-3">Overview</h2>
-          <div id="results-carousel" class="carousel results-carousel" , autoplaySpeed="5000">
-            <div class="item">
-              <!-- Overview -->
-              <img src="static/images/keyidea.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
-                Given a silent video and the camera direction, the model generates corresponding first-order
-                ambisonics.
-                The camera direction gives cue about where the visual event occurs, enabling the model to generate an
-                appropriate three-dimensional sound field.
+          <div id="results-carousel" class="carousel results-carousel" autoplaySpeed="5000">
+            <!-- Item 1 -->
+            <div class="item"
+              style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+              <div style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                <img src="static/images/keyidea.jpg" alt="MY ALT TEXT"
+                  style="max-height:100%; width:auto; object-fit:contain;" />
+              </div>
+              <h2 class="subtitle has-text-centered" style="margin:0;">
+                Given a silent video and the camera direction, the model generates corresponding first-order ambisonics.
+                The camera direction gives cue about where the visual event occurs in the 3D sound field.
               </h2>
             </div>
-            <div class="item">
-              <!-- Overview -->
-              <img src="static/images/dataset.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
+            <!-- Item 2 -->
+            <div class="item"
+              style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+              <span class="image fit"
+                style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                <img src="static/images/dataset2.png" style="max-height:100%; width:auto; object-fit:contain;">
+              </span>
+              <h2 class="subtitle has-text-centered" style="margin:0;">
                 We propose YT-Ambigen, a new dataset comprising YouTube videos paired with first-order ambisonics,
-                tailored for the audio generaiton.
+                tailored for the audio generation.
               </h2>
             </div>
-            <div class="item">
-              <!-- Visage Method -->
-              <img src="static/images/method.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
+            <!-- Item 3 -->
+            <div class="item"
+              style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+              <div style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                <img src="static/images/method.jpg" alt="MY ALT TEXT"
+                  style="max-height:100%; width:auto; object-fit:contain;" />
+              </div>
+              <h2 class="subtitle has-text-centered" style="margin:0;">
                 We present Video-to-Spatial Audio Generation (ViSAGe), an end-to-end framework designed to generate
-                and
-                spatialize audio based on visual content and camera direction.
-                ViSAGe leverages CLIP features, patchwise energy maps, and neural audio codecs along with rotation
-                augmentation.
+                spatial audio using CLIP features, patchwise energy maps, and neural audio codecs.
               </h2>
             </div>
-            <div class="item">
-              <!-- Qualitative Examples -->
-              <img src="static/images/experiment.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
+            <!-- Item 4 -->
+            <div class="item"
+              style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+              <div style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                <img src="static/images/experiment.png" alt="MY ALT TEXT"
+                  style="max-height:100%; width:auto; object-fit:contain;" />
+              </div>
+              <h2 class="subtitle has-text-centered" style="margin:0;">
                 ViSAGe outperforms two-stage approaches, which separately handle video-to-audio generation and audio
                 spatialization, across all metrics.
               </h2>
             </div>
-            <div class="item">
-              <!-- Qualitative Examples -->
-              <img src="static/images/qual.jpg" alt="MY ALT TEXT" />
-              <h2 class="subtitle has-text-centered">
+            <!-- Item 5 -->
+            <div class="item"
+              style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+              <div style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                <img src="static/images/qual.jpg" alt="MY ALT TEXT"
+                  style="max-height:100%; width:auto; object-fit:contain;" />
+              </div>
+              <h2 class="subtitle has-text-centered" style="margin:0;">
                 Qualitative examples of generated first-order ambisonics.
               </h2>
             </div>
@@ -194,10 +222,7 @@
         </div>
       </div>
     </center>
-    </div>
-
-  </section>
-  <!-- End image carousel -->
+  </section> <!-- End image carousel -->
 
   <!--YT-Ambigen Examples-->
   <!-- YT-Ambigen Examples -->
@@ -206,35 +231,41 @@
       <div class="container">
         <!-- Title -->
         <h3 class="title is-3">Examples from YT-Ambigen</h3>
-        <div class="columns is-centered has-text-centered">
-          <div class="columns is-four-fifths">
-            <div class="column is-one-quarter">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/OEujmSPYOio" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-one-quarter has-text-centered">
+            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/OEujmSPYOio" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
             </div>
-            <div class="column is-one-quarter">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/noIrxwhE6vs" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+
+          </div>
+          <!-- Column 2 -->
+          <div class="column is-one-quarter has-text-centered">
+            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/noIrxwhE6vs" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
             </div>
-            <div class="column is-one-quarter">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/nTetwPbzCH0" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+          </div>
+          <!-- Column 3 -->
+          <div class="column is-one-quarter has-text-centered">
+            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/nTetwPbzCH0" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
             </div>
-            <div class="column is-one-quarter">
-              <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/agdEE_NsdvQ" frameborder="0"
-                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
-              </div>
+          </div>
+          <!-- Column 4 -->
+          <div class="column is-one-quarter has-text-centered">
+            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/agdEE_NsdvQ" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+              </iframe>
             </div>
           </div>
         </div>
@@ -255,7 +286,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">Ground Truth</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/OEujmSPYOio" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/awUvswKbNyQ" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -265,7 +296,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">Ground Truth Panorama</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/noIrxwhE6vs" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/tbF9r8Q7jb0" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -275,7 +306,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">ViSAGe</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/nTetwPbzCH0" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/eyVuLyVJVB4" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -285,7 +316,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">ViSAGe Panorama</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/agdEE_NsdvQ" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/S7mubLGuf-8" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -293,43 +324,51 @@
           </div>
 
           <!--Second Example-->
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+          <!-- Column 1 -->
+          <div class="column is-one-quarter has-text-centered" style="display: flex; flex-direction: column;">
+            <div class="video-container"
+              style="margin-top: auto; position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/DzWpo3eIsFQ" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+          <!-- Column 2 -->
+          <div class="column is-one-quarter has-text-centered" style="display: flex; flex-direction: column;">
+            <div class="video-container"
+              style="margin-top: auto; position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/VcsITcru0fA" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+          <!-- Column 3 -->
+          <div class="column is-one-quarter has-text-centered" style="display: flex; flex-direction: column;">
+            <div class="video-container"
+              style="margin-top: auto; position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/oFcJX2h01cU" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+          <!-- Column 4 -->
+          <div class="column is-one-quarter has-text-centered" style="display: flex; flex-direction: column;">
+            <div class="video-container"
+              style="margin-top: auto; position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
+              <iframe src="https://www.youtube.com/embed/6lQPUnkh34M" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
 
-          <!--Third Example-->
+          <!--3rd Example-->
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/_8OklaH1hFo" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -337,7 +376,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/_EEc0Wmfb9k" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -345,7 +384,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/cchK7kPUKpo" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -353,7 +392,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/y1vl8VqB1Wk" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -363,7 +402,7 @@
           <!--4th Example-->
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/OFN5OINWnmg" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -371,7 +410,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/k_2BWQ9C0dg" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -379,7 +418,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/4N2NUQXPTYg" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -387,80 +426,13 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/6N183sXGRoY" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
 
-          <!--5th Example-->
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-
-          <!--6th Example-->
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
-          <div class="column is-one-quarter has-text-centered">
-            <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-              </iframe>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -478,11 +450,12 @@
 
         <!-- Grid: Each column contains a title and its video -->
         <div class="columns is-multiline is-centered">
+          <!--SpecVQGAN 1-->
           <!-- Column 1 -->
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">ViSAGe</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/OEujmSPYOio" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/1e0c6tmE8PM" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -492,7 +465,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">SpecVQGAN + Ambi Enc.</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/noIrxwhE6vs" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/FVEBcTec3lc" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -500,9 +473,9 @@
           </div>
           <!-- Column 3 -->
           <div class="column is-one-quarter has-text-centered">
-            <h4 class="title is-4">SpecVQGAN + Audio Spatia.</h4>
+            <h4 class="title is-4">SpecVQGAN + Audio Spatial.</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/nTetwPbzCH0" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/aVVHxIe3RFk" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -512,17 +485,18 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">Ground Truth</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/agdEE_NsdvQ" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/s1kp7wKiwa4" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
 
-          <!--5th Example-->
+          <!--SpecVQGAN 2-->
+          <!--SpecVQGAN 2-->
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/cGS8ZNTNu7I" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -530,7 +504,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/qB37v3D4HiQ" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -538,7 +512,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/Ph-KQkdFrEw" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -546,16 +520,19 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/N1RFFLd8BMc" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
+
+          <!--Diff foley 1-->
+          <!-- Column 1 -->
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">ViSAGe</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/OEujmSPYOio" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/PyzV7vlhL9c" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -565,7 +542,7 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">Diff-foley + Ambi Enc.</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/noIrxwhE6vs" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/HPEFEd2RBso" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -573,9 +550,9 @@
           </div>
           <!-- Column 3 -->
           <div class="column is-one-quarter has-text-centered">
-            <h4 class="title is-4">Diff-foley + Audio Spatia.</h4>
+            <h4 class="title is-4">Diff-foley + Audio Spatial.</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/nTetwPbzCH0" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/HPEFEd2RBso" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -585,17 +562,17 @@
           <div class="column is-one-quarter has-text-centered">
             <h4 class="title is-4">Ground Truth</h4>
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/agdEE_NsdvQ" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/uI6ZHTjYjyc" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
             </div>
           </div>
 
-          <!--5th Example-->
+          <!--Diff-foley 2-->
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/gpFlheCWo-E" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -603,7 +580,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/2o8SPJrTit4" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -611,7 +588,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/2Q_xkxOFz70" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -619,7 +596,7 @@
           </div>
           <div class="column is-one-quarter has-text-centered">
             <div class="video-container" style="position: relative; padding-bottom: 100%; height: 0; overflow: hidden;">
-              <iframe src="https://www.youtube.com/embed/VIDEO_ID5" frameborder="0"
+              <iframe src="https://www.youtube.com/embed/7YinKGrfPoc" frameborder="0"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
               </iframe>
@@ -633,10 +610,79 @@
     </div>
   </section>
 
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container">
 
+        <h3 class="title is-3">Examples of Saliency Metrics</h3>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-half has-text-centered">
+            <h4 class="title is-4">Original Audio Energy Map</h4>
+            <img src="images/original.jpg" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <h4 class="title is-4">Modified for Spherical Evaluation</h4>
+            <img src="images/sphere_modified.jpg" />
+          </div>
+
+          <div class="column is-half has-text-centered">
+            <h4 class="title is-4">Ground Truth Audio Energy Map</h4>
+            <img src="images/minus_gt.jpg" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <h4 class="title is-4">Generated Audio Energy Map</h4>
+            <img src="images/minus_generated.jpg" />
+          </div>
+          <div class="column is-full">
+            <h2 class="subtitle has-text-centered">
+              CC: -0.087, AUC: 0.443
+            </h2>
+          </div>
+          </h2>
+
+          <div class="column is-half has-text-centered">
+            <img src="images/03_gt.jpg" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="images/03_generated.jpg" />
+          </div>
+          <div class="column is-full">
+            <h2 class="subtitle has-text-centered">
+              CC: 0.337, AUC: 0.640
+            </h2>
+          </div>
+
+          <div class="column is-half has-text-centered">
+            <img src="images/06_gt.jpg" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="images/06_generated.jpg" />
+          </div>
+          <div class="column is-full">
+            <h2 class="subtitle has-text-centered">
+              CC: 0.632, AUC: 0.833
+            </h2>
+          </div>
+
+          <div class="column is-half has-text-centered">
+            <img src="images/minus_gt.jpg" />
+          </div>
+          <div class="column is-half has-text-centered">
+            <img src="images/09_generated.jpg" />
+          </div>
+          <div class="column is-full">
+            <h2 class="subtitle has-text-centered">
+              CC: 0.942, AUC: 0.998
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
 
   <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <section class=" section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@inproceedings{kim2025visage, 
@@ -658,8 +704,9 @@
 
             <p>
               This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
-                target="_blank">Academic Project Page Template</a> which was adopted from the <a
-                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                target="_blank">Academic
+                Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                target="_blank">Nerfies</a> project page.
               </a>.
             </p>
 

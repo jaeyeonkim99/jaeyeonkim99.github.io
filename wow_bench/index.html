@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal
+        Vocalizations</title>
+    <link rel="icon" type="image/x-icon" href="static/images/whale_icon_removebg.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+
+    <section class="hero is-light">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">
+                            WoW-Bench <img src="static/images/whale_icon_removebg.png" alt="whale icon"
+                                style="width:1.5em; height:auto;; vertical-align:middle;"> :
+                            Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal
+                            Vocalizations
+                        </h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="https://jaeyeonkim99.github.io/" target="_blank">Jaeyeon
+                                    Kim</a><sup>1*</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://hs-yn.github.io/" target="_blank">Heeseung Yun</a><sup>2</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=kt3_CnoAAAAJ" target="_blank">Sang
+                                    Hoon Woo</a><sup>2</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://huckiyang.github.io/" target="_blank">Chao-Han Huck
+                                    Yang</a><sup>3</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://vision.snu.ac.kr/gunhee/" target="_blank">Gunhee Kim</a><sup>2</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+
+                            <span class="author-block"><sup>1</sup> Carnegie Mellon University
+                                University</span>
+                            <br>
+                            <span class="author-block"><sup>2</sup>Seoul National
+                                University</span>
+                            <br>
+                            <span class="author-block"><sup>3</sup>NVIDIA</span>
+                            <br>
+                            <span class="author-block" style="font-size: 0.8em"><sup>*</sup>This work was done at Seoul
+                                National
+                                University</span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2508.20976" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+
+                                <!-- Dataset link-->
+                                <span class="link-block">
+                                    <a href="https://jaeyeonkim99.github.io/wow_bench" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-database"></i>
+                                        </span>
+                                        <span>Dataset (Will be released soon)</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paper abstract -->
+    <section class="section hero">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-3">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Large audio language models (LALMs) extend language understanding into the auditory domain,
+                            yet their ability to perform low-level listening, such as pitch and duration detection,
+                            remains underexplored. However, low-level listening is critical for real-world,
+                            out-of-distribution tasks where models must reason about unfamiliar sounds based on
+                            fine-grained acoustic cues. To address this gap, we introduce the World-of-Whale benchmark
+                            (WoW-Bench) to evaluate low-level auditory perception and cognition using marine mammal
+                            vocalizations. WoW-bench is composed of a Perception benchmark for categorizing novel sounds
+                            and a Cognition benchmark, inspired by Bloom's taxonomy, to assess the abilities to
+                            remember, understand, apply, and analyze sound events. For the Cognition benchmark, we
+                            additionally introduce distractor questions to evaluate whether models are truly solving
+                            problems through listening rather than relying on other heuristics. Experiments with
+                            state-of-the-art LALMs show performance far below human levels, indicating a need for
+                            stronger auditory grounding in LALMs.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+    <!-- Overview -->
+    <section class="hero is-small is-light">
+        <div class="hero-body"
+            style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <!-- Title -->
+            <h2 class="title is-3">Overview</h2>
+
+            <!-- Figure -->
+            <figure
+                style="width:75%; max-height:500px; margin:1rem 0; display:flex; align-items:center; justify-content:center;">
+                <img src="static/images/overview.png" alt="Descriptive alt text">
+            </figure>
+
+            <!-- Description -->
+            <h2 class="subtitle" style="max-width:60%; margin:0;">
+                <b>World-of-Whale (WoW)</b> benchmark aims to evaluate low-level listening capabilities of LALMs using
+                marine
+                mammal vocalizations, which are rarely represented in conventional datasets and span a broad acoustic
+                range.
+                <br><br>It is composed of <b>Perception</b> benchmark that assess the perceptual generalization of LALMs
+                by evaluating their ability to categorize sounds into less familiar classes and
+                <b>Cognition</b> benchmark that assesses whether models can cognitively process fine-grained acoustic
+                characteristics and perceived events through low-level listening. It also contains
+                <b>Distractor</b> questions to evaluate whether models are truly solving tasks
+                through listening rather than relying on shallow heuristics or linguistic priors.
+            </h2>
+        </div>
+    </section>
+
+    <section class="hero is-small">
+        <div class="hero-body"
+            style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+
+            <h2 class="title is-3">Example Questions</h2>
+
+            <div class="box" style="border: 2px solid #ddd;
+                padding: 20px;
+                max-width: 80%;
+                margin: 0 auto 2rem;"> <!-- ← max-width, center & bottom‐margin -->
+                <div class="table-responsive">
+                    <table class="table is-bordered is-striped" style="width: 100%;  
+                    table-layout: fixed;      
+                      margin: 0 auto; 
+                      border-collapse: collapse;">
+                        <colgroup>
+                            <col style="width: 50%;">
+                            <col style="width: 50%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th style="text-align:center; padding:10px;">Audio</th>
+                                <th style="text-align:center; padding:10px;">Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:120px;">
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    <audio controls controlslist="nodownload">
+                                        <source src="static/audios/vocalization.wav" type="audio/wav">
+                                    </audio>
+                                    <br><br><b>Question:</b>Which type of vocalization is most likely identified in the
+                                    sound recording?
+                                    <br><b>Type:</b> Perception/Vocalization
+                                </td>
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    A. Continuous modulated tones<br>
+                                    B. High-pitched whistles<br>
+                                    <b>C. Single moan</b><br>
+                                    D. Series of rapid pulsed clicks
+                                </td>
+                            </tr>
+                            <tr style="height:120px;">
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    <audio controls controlslist="nodownload">
+                                        <source src="static/audios/understand.wav" type="audio/wav">
+                                    </audio>
+                                    <br><br><b>Question:</b> Based on the acoustic characteristics of the sound, which
+                                    of the following best describes the main feature of the recording?
+                                    <br><b>Type:</b> Cognition/Understand
+                                </td>
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    A. Repetitive short broadband bursts.<br>
+                                    B. A continuous low-frequency tone around 400 Hz.<br>
+                                    <b>C. Modulated mid-frequency tones primarily between 1–4 kHz.</b><br>
+                                    D. A high-pitched modulating tone primarily above 8 kHz.
+                                </td>
+                            </tr>
+                            <tr style="height:120px;">
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    <audio controls controlslist="nodownload">
+                                        <source src="static/audios/apply_frequency.wav" type="audio/wav">
+                                    </audio>
+                                    <br><br><b>Question:</b> Given the following sound sequence: The first sound occurs
+                                    before the first silence, the second sound occurs after the first silence, and the
+                                    third sound occurs after the second silence. Which sound is most dominant in higher
+                                    frequencies?
+                                    <br><b>Type:</b> Cognition/Apply-Frequency
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    <b>A. The first sound</b><br>
+                                    B. The second sound<br>
+                                    C. The third sound<br>
+                                    D. All the sounds are identical in frequency range
+                                </td>
+                            </tr>
+                            </tr>
+                            <tr style="height:120px;">
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    <audio controls controlslist="nodownload">
+                                        <source src="static/audios/distractor.wav" type="audio/wav">
+                                    </audio>
+                                    <br><br><b>Question:</b> Given the following sound sequence: Sound 1 occurs before
+                                    the first silence, Sound 2 occurs after the first silence, and Sound 3 occurs after
+                                    the second silence. Which sound is most dominant in higher frequencies?
+                                    <br><b>Type:</b> Distractor: Cognition/Apply-Frequency
+                                </td>
+                                <td style="text-align:left; vertical-align:middle; padding:15px;">
+                                    A. Sound 1<br>
+                                    B. Sound 2<br>
+                                    C. Sound 3<br>
+                                    <b>D. All the same</b>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </section>
+    <section class="hero is-small">
+        <div class="hero-body"
+            style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+            <h2 class="title is-5" style="max-width:80%; margin:0 auto 1.5rem;">
+                Example questions across all tasks, each paired with a spectrogram of the corresponding input
+                audio.
+            </h2>
+            <figure class="image" style="max-width:80%; margin:auto;">
+                <img src="static/images/dataset_samples.png" alt="Descriptive alt text"
+                    style="width:100%; height:auto;">
+            </figure>
+
+        </div>
+    </section>
+
+    <!-- Add description for demo videos-->
+    <section class="hero is-small is-light">
+        <center>
+            <div class="hero-body" style="display: flex; align-items: center; justify-content: center;">
+                <div class="container">
+                    <h2 class="title is-3">Experiment Results</h2>
+                    <div id="results-carousel" class="carousel results-carousel" autoplaySpeed="5000">
+                        <!-- Item 1 -->
+                        <div class="item"
+                            style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+                            <div
+                                style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                                <img src="static/images/main_result.png" alt="MY ALT TEXT"
+                                    style="max-height:100%; width:auto; object-fit:contain;" />
+                            </div>
+                            <h2 class="subtitle has-text-centered" style="margin:0;">
+                                LALMs perform poorly on the WoW-Bench, highlighting their limiations in
+                                their low-level listening.
+                            </h2>
+                        </div>
+                        <div class="item"
+                            style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+                            <div
+                                style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                                <img src="static/images/distribution.png" alt="MY ALT TEXT"
+                                    style="max-height:80%; width:auto; object-fit:contain;" />
+                            </div>
+                            <h2 class="subtitle has-text-centered" style="margin:0;">
+                                LALMs' performance vary in Cognition tasks, highlighting strengths and weaknesses of
+                                each model's low-level listening abilities. Also, we observed negative correlation
+                                between distractor and non-distractor performance, indicating a reliance on non-acoustic
+                                cues.
+                            </h2>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="item"
+                            style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+                            <div
+                                style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                                <img src="static/images/human_eval.png"
+                                    style="max-height:90%; width:auto; object-fit:contain;">
+                            </div>
+                            <h2 class="subtitle has-text-centered" style="margin:0;">
+                                Comparison with human performance with mini-test split. We compare human accuracy
+                                against best-performing models.
+                                Human and model performance are comparable in the Perception benchmark, but human
+                                significantly outperform models on Cognition benchmark.
+                            </h2>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="item"
+                            style="display: flex; flex-direction: column; justify-content: space-between; align-items: center; height:600px;">
+                            <div
+                                style="width:80%; height:500px; display: flex; align-items: center; justify-content: center;">
+                                <img src="static/images/qual.png" alt="MY ALT TEXT"
+                                    style="max-height:100%; width:auto; object-fit:contain;" />
+                            </div>
+                            <h2 class="subtitle has-text-centered" style="margin:0;">
+                                In Cognition tasks, LALMs tend to first infer a sound category and then make decision
+                                based on the presumed acoustic characteristics of the inferred class, leading to wrong
+                                conclusion.
+                            </h2>
+                        </div>
+                        <!-- Item 4 -->
+
+                    </div>
+                </div>
+            </div>
+        </center>
+    </section> <!-- End image carousel -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-centered">
+                    <!-- now this column will be centered -->
+                    <div class="column is-half has-text-centered">
+                        <h2 class="title is-3">Acknowledgements</h2>
+                        <!-- remove has-text-justified -->
+                        <div class="content">
+                            <p>
+                                The audio recordings and associated metadata used in this work were sourced from
+                                <a href="https://www.notion.so/www.whalingmuseum.org" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Watkins Marine Mammal Sound Database, Woods Hole Oceanographic Institution, and the
+                                    New Bedford Whaling Museum
+                                </a>.
+                                We gratefully acknowledge the New
+                                Bedford
+                                Whaling
+                                Museum for granting permission to use the database for research purpose
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@article{kim2025wow,
+  title={WoW-Bench: Evaluating Fine-Grained Acoustic Perception in Audio-Language Models via Marine Mammal Vocalizations},
+  author={Kim, Jaeyeon and Yun, Heeseung and Woo, SangHoon and Yang, Chao-Han Huck and Kim, Gunhee},
+  journal={arXiv preprint arXiv:2508.20976},
+  year={2025}
+}</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic
+                                Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                target="_blank">Nerfies</a> project page.
+                            </a>.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>

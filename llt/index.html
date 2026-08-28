@@ -3,7 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Long Listening Thoughts — Demo Page</title>
+    <title>Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement</title>
+    <meta
+      name="description"
+      content="LLT is a framework for building audio post-training datasets that pairs deliberate perceptual grounding with explicit cognitive behaviors, improving MMAU, MMAR, and MMSU. EMNLP 2026 Findings."
+    />
+    <meta name="keywords" content="audio reasoning, large audio-language model, LALM, post-training, chain-of-thought, MMAU, MMAR, MMSU" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jaeyeonkim99.github.io/llt/" />
+    <meta
+      property="og:title"
+      content="Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement"
+    />
+    <meta
+      property="og:description"
+      content="LLT is a framework for building audio post-training datasets that pairs deliberate perceptual grounding with explicit cognitive behaviors, improving MMAU, MMAR, and MMSU. EMNLP 2026 Findings."
+    />
+    <meta property="og:image" content="https://jaeyeonkim99.github.io/llt/static/images/approach.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement"
+    />
+    <meta
+      name="twitter:description"
+      content="LLT is a framework for building audio post-training datasets that pairs deliberate perceptual grounding with explicit cognitive behaviors, improving MMAU, MMAR, and MMSU. EMNLP 2026 Findings."
+    />
+    <meta name="twitter:image" content="https://jaeyeonkim99.github.io/llt/static/images/approach.png" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎧</text></svg>"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +50,7 @@
         --bg-code: #f4f4f6;
         --fg: #1a1a1f;
         --fg-soft: #4a4a55;
-        --muted: #8a8a96;
+        --muted: #6b6b78;
         --border: #e4e4ea;
         --accent: #4f6bed;
         --accent-soft: #eef1ff;
@@ -28,6 +61,21 @@
         --trigger-bg: #fff4cc;
         --radius: 10px;
         --maxw: 980px;
+        --measure: 820px;
+
+        /* Stage palette — mirrors the colors used in the method figure */
+        --s1: #2f5597;
+        --s1-soft: #e9f2f8;
+        --s1-line: #bcd9e8;
+        --s2: #8a6800;
+        --s2-soft: #fdf5dd;
+        --s2-line: #f0dca0;
+        --s3: #4c7a30;
+        --s3-soft: #eff6e9;
+        --s3-line: #cbe2ba;
+        --s4: #3c4a5f;
+        --s4-soft: #edf0f4;
+        --s4-line: #c4ccd8;
       }
 
       * {
@@ -62,8 +110,15 @@
         padding: 56px 0;
         border-bottom: 1px solid var(--border);
       }
+      /* Alternating bands so the page reads as blocks, not one long sheet */
+      section:nth-of-type(even) {
+        background: var(--bg-soft);
+      }
       section:last-of-type {
         border-bottom: none;
+      }
+      section > .wrap > p {
+        max-width: var(--measure);
       }
 
       h1,
@@ -82,7 +137,19 @@
       }
       h2 {
         font-size: 1.6rem;
-        margin: 0 0 0.4rem;
+        margin: 0 0 0.9rem;
+        padding-bottom: 12px;
+        position: relative;
+      }
+      h2::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        border-radius: 2px;
+        background: var(--accent);
       }
       h3 {
         font-size: 1.05rem;
@@ -110,8 +177,21 @@
       /* Hero — full title (with subtitle joined by colon) */
       .hero {
         text-align: center;
-        padding: 88px 0 68px;
+        padding: 72px 0 68px;
         border-bottom: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 78%);
+      }
+      .hero .venue {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 5px 16px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
       }
       .hero h1 {
         font-size: 2.1rem;
@@ -196,11 +276,34 @@
 
       .section-desc {
         color: var(--fg-soft);
-        margin: -0.2rem 0 1.8rem;
-        max-width: 760px;
+        margin: 0 0 1.8rem;
+        max-width: var(--measure);
       }
 
-      /* Method bullets */
+      /* Method figure */
+      .method-fig {
+        margin: 0 0 30px;
+      }
+      .fig-scroll {
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--bg);
+      }
+      .fig-scroll img {
+        display: block;
+        width: 100%;
+        min-width: 760px;
+        height: auto;
+      }
+      .method-fig figcaption {
+        margin-top: 12px;
+        font-size: 0.86rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      /* Method bullets — each stage carries its color from the figure */
       .method-list {
         list-style: none;
         padding: 0;
@@ -210,21 +313,42 @@
       .method-list li {
         counter-increment: stage;
         position: relative;
-        padding: 12px 12px 12px 50px;
-        margin-bottom: 8px;
-        background: var(--bg-soft);
-        border: 1px solid var(--border);
+        padding: 14px 14px 14px 52px;
+        margin-bottom: 10px;
+        background: var(--stage-soft);
+        border: 1px solid var(--stage-line);
+        border-left: 4px solid var(--stage);
         border-radius: var(--radius);
+      }
+      .method-list li:nth-child(1) {
+        --stage: var(--s1);
+        --stage-soft: var(--s1-soft);
+        --stage-line: var(--s1-line);
+      }
+      .method-list li:nth-child(2) {
+        --stage: var(--s2);
+        --stage-soft: var(--s2-soft);
+        --stage-line: var(--s2-line);
+      }
+      .method-list li:nth-child(3) {
+        --stage: var(--s3);
+        --stage-soft: var(--s3-soft);
+        --stage-line: var(--s3-line);
+      }
+      .method-list li:nth-child(4) {
+        --stage: var(--s4);
+        --stage-soft: var(--s4-soft);
+        --stage-line: var(--s4-line);
       }
       .method-list li::before {
         content: counter(stage);
         position: absolute;
         left: 14px;
-        top: 12px;
+        top: 14px;
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        background: var(--accent);
+        background: var(--stage);
         color: #fff;
         display: flex;
         align-items: center;
@@ -238,7 +362,7 @@
       .method-list li code {
         font-family: "JetBrains Mono", monospace;
         font-size: 0.82rem;
-        background: var(--bg-code);
+        background: rgba(255, 255, 255, 0.75);
         padding: 1px 5px;
         border-radius: 3px;
         color: var(--fg);
@@ -251,6 +375,7 @@
         border-radius: var(--radius);
         padding: 22px;
         margin-bottom: 22px;
+        box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
       }
       .example-card .meta {
         display: inline-block;
@@ -341,9 +466,10 @@
         font-weight: 600;
         margin-bottom: 10px;
       }
+      /* The "challenging question" label is Stage 2 — carry its color */
       .subcard-label.alt {
-        color: var(--fg-soft);
-        background: var(--bg-soft);
+        color: var(--s2);
+        background: var(--s2-soft);
       }
 
       .q-label {
@@ -566,6 +692,61 @@
         text-decoration: underline;
       }
 
+      /* BibTeX */
+      .bibtex-wrap {
+        position: relative;
+        max-width: var(--measure);
+      }
+      .bibtex {
+        margin: 0;
+        background: var(--bg-code);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+        overflow-x: auto;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        color: var(--fg);
+      }
+      .copy-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.76rem;
+        font-weight: 500;
+        color: var(--fg-soft);
+        padding: 4px 10px;
+        transition:
+          color 0.15s,
+          border-color 0.15s;
+      }
+      .copy-btn:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      /* Footer */
+      footer {
+        padding: 34px 0 44px;
+        border-top: 1px solid var(--border);
+        background: var(--bg-soft);
+      }
+      footer p {
+        margin: 0;
+        font-size: 0.86rem;
+        color: var(--muted);
+        text-align: center;
+      }
+      footer p + p {
+        margin-top: 6px;
+      }
+
       /* Responsive */
       @media (max-width: 720px) {
         h1 {
@@ -590,6 +771,9 @@
           padding: 7px 15px;
           font-size: 0.86rem;
         }
+        .method-fig figcaption {
+          text-align: left;
+        }
       }
     </style>
   </head>
@@ -597,6 +781,7 @@
     <!-- HERO — full paper title -->
     <header class="hero">
       <div class="wrap">
+        <div class="venue">EMNLP 2026 Findings</div>
         <h1>Long Listening Thoughts: Eliciting Open Auditory Reasoning with Deliberative Perception and Cognitive Refinement</h1>
 
         <div class="authors">
@@ -695,6 +880,17 @@
       <div class="wrap">
         <h2>Method Overview</h2>
         <p class="section-desc">A four-stage pipeline that synthesizes 1.6M long reasoning traces from an existing short audio CoT dataset.</p>
+
+        <figure class="method-fig">
+          <div class="fig-scroll">
+            <img
+              src="static/images/approach.png"
+              alt="Overview of the four-stage LLT pipeline: dense audio description, challenging question refinement, incorrect trace generation, and thought continuation."
+            />
+          </div>
+          <figcaption>Overview of the LLT pipeline. Colors below match the stages in the figure.</figcaption>
+        </figure>
+
         <ol class="method-list">
           <li>
             <b>Deliberating multi-aspect dense audio description.</b> Build multi-aspect descriptions spanning <i>semantic</i>, <i>acoustic</i>, and
@@ -737,6 +933,33 @@
         <div id="qualitative-examples-container"></div>
       </div>
     </section>
+
+    <!-- BIBTEX -->
+    <section id="bibtex">
+      <div class="wrap">
+        <h2>BibTeX</h2>
+        <p class="section-desc">If you find this work useful, please cite:</p>
+        <div class="bibtex-wrap">
+          <button class="copy-btn" type="button" id="copy-bib">Copy</button>
+          <pre class="bibtex"><code id="bibtex-text">@inproceedings{llt2026,
+  title     = {Long Listening Thoughts: Eliciting Open Auditory Reasoning
+               with Deliberative Perception and Cognitive Refinement},
+  author    = {Kim, Jaeyeon and Yang, Chao-Han Huck and Zhang, Luoyi and
+               Hsu, Chan-Jan and Ruiloba Portilla, Fernando and Tian, Jinchuan and
+               Watanabe, Shinji and Busso, Carlos},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2026},
+  year      = {2026}
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap">
+        <p>Carnegie Mellon University &middot; NVIDIA</p>
+        <p>Questions? Reach out to <a href="https://jaeyeonkim99.github.io/">Jaeyeon Kim</a>.</p>
+      </div>
+    </footer>
 
     <!-- DATA + RENDER -->
     <script type="application/json" id="page-data">
@@ -1189,6 +1412,27 @@
           btn.textContent = block.classList.contains("expanded") ? "Show less ▴" : "Show more ▾";
         }
       });
+
+      // Copy BibTeX
+      const copyBtn = document.getElementById("copy-bib");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", async () => {
+          const text = document.getElementById("bibtex-text").textContent;
+          try {
+            await navigator.clipboard.writeText(text);
+          } catch {
+            // navigator.clipboard needs a secure context (fails on file://)
+            const ta = document.createElement("textarea");
+            ta.value = text;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            ta.remove();
+          }
+          copyBtn.textContent = "Copied";
+          setTimeout(() => (copyBtn.textContent = "Copy"), 1600);
+        });
+      }
 
       // Hide show-more when content fits
       document.querySelectorAll(".reasoning.collapsible").forEach((el) => {

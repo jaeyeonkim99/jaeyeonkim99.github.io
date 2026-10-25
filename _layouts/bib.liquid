@@ -205,10 +205,10 @@
       {% elsif entry.arxiv %}
         <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">Paper</a>
       {% endif %}
+      <!-- GitHub only when there is no project page (the project page links the code) -->
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Project Page</a>
-      {% endif %}
-      {% if entry.code %}
+      {% elsif entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">GitHub</a>
       {% endif %}
       {% if entry.bibtex_show %}
